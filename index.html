@@ -4,161 +4,244 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WhatsApp fake</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-    <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link id="pagestyle" href="style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 
 <body>
-    
-       <nav>
-        <div class="row color-green">
-            <div style="font-size: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="col s8">WhatsApp</div>
-            <div style="text-align: end;" class="col s2"><i class="material-icons">search</i></div>
-            <div class="col s2"><i class="material-icons">more_vert</i></div>
-        </div>
-    </nav>
 
+
+  <div class="navbar-fixed">
+    <nav>
+      <div class="row color-green nav-wrapper">
+        <div style="font-size: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; padding-left: 20px;" class="col s8">WhatsApp</div>
+        <div style="text-align: end;" class="col s2"><i class="material-icons">search</i></div>
+        <!-- <div class="col s2"><i class="material-icons">more_vert</i></div> -->
+        <div style="text-align: end;" class="col s2"><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons">more_vert</i></a></div>
+       </div>
+    </nav>
+  </div>
+
+     <!-- Dropdown Structure -->
+     
+     <ul id="dropdown1" class="dropdown-content">
+     
+
+     
+        <li><a href="#!">Ferramentas comerciais</a></li>
+        <li><a href="#!">Novo grupo</a></li>
+        <li><a href="#!">Nova Transmissão</a></li>
+        <li><a href="#!">Etiquetas</a></li>
+        <li><a href="#!">Aparelhos conectados</a></li>
+        <li><a href="#!">Mensagens favoritas</a></li>
+        <li><a href="#!">Pagamentos</a></li>
+        <!-- <li><a href="#!">Modo noturno</a></li> -->
+        <li id="darkButton"><a onclick="darkMode()">Modo noturno</a></li>
+        <li id="lightButton" style="display: none;"><a onclick="lightMode()">Modo Claro</a></li>
+        <!-- <li class="divider"></li> -->
+   </ul>
+
+  <div style=" z-index:1000;" class="navbar-fixed">
     <ul id="tabs-swipe-demo" class="tabs  color-green">
         <li class="tab col s1"><a href="#test-swipe-4" class="material-icons">camera_alt</a></li>
         <li class="tab col s3"><a href="#test-swipe-1"  style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Conversas</a></li>
         <li class="tab col s3"><a class="active" href="#test-swipe-2" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Status</a></li>
         <li class="tab col s3"><a href="#test-swipe-3"  style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Chamadas</a></li>
     </ul>
+  </div>
+
 
     <!-- ABA CONVERSAS -->
       <div id="test-swipe-1" class="col-md-12 conversas">
         <ul class="collection border-color color-green">
-            <li class="collection-item border-color text-white  avatar">
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">Aninha</span>
-                <p><i style="color: green;" class="tyni material-icons">check</i>
-                    <i style="margin-left: -19px; color: green;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Tu viu o babado?</span> <br>
-            </li>
-            <li class="collection-item border-color text-white  avatar">
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">Ninha</span>
-                <p><i style="color: green;" class="tyni material-icons">check</i>
-                    <i style="margin-left: -19px; color: green;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Vai estudar, bicha</span> <br>
-            </li>
-            <li class="collection-item border-color text-white  avatar">
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">BadNinha</span>
-                <p><i style="color: green;" class="tyni material-icons">check</i>
-                    <i style="margin-left: -19px; color: green;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">To nem ai para essa fofoca</span> <br>
-            </li>
-            <li class="collection-item border-color text-white  avatar">
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">poxAninha</span>
-                <p><i style="color: green;" class="tyni material-icons">check</i>
-                    <i style="margin-left: -19px; color: green;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Bora jogar lol?</span> <br>
-            </li>
-            <li class="collection-item border-color text-white  avatar">
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">SadNinha</span>
-                <p><i style="color: green;" class="tyni material-icons">check</i>
-                    <i style="margin-left: -19px; color: green;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Não to bem não</span> <br>
-            </li>
-            <li class="collection-item border-color text-white  avatar">
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">SadNinha</span>
-                <p><i style="color: green;" class="tyni material-icons">check</i>
-                    <i style="margin-left: -19px; color: green;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Não to bem não</span> <br>
-            </li>
-            <li class="collection-item border-color text-white  avatar">
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">SadNinha</span>
-                <p><i style="color: green;" class="tyni material-icons">check</i>
-                    <i style="margin-left: -19px; color: green;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Não to bem não</span> <br>
-            </li>
-            <li class="collection-item border-color text-white  avatar">
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">SadNinha</span>
-                <p><i style="color: green;" class="tyni material-icons">check</i>
-                    <i style="margin-left: -19px; color: green;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Não to bem não</span> <br>
-            </li>
+            
+          <button style="width: 100%;" onclick="mudaConversa()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">
+            <img src="perfil.jpg" alt="" class="circle">
+            <span style="font-weight: bold; " class="title conversa-nome">Aninha</span>
+            <p><i style="color: #22a095;" class="tyni material-icons">check</i>
+            <i style="margin-left: -19px; color: #22a095;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Tu viu o babado?</span> <br>
+          </button>
+                
+          <button style="width: 100%;" onclick="mudaConversa()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">                
+            <img src="perfil.jpg" alt="" class="circle">
+            <span style="font-weight: bold;" class="title">Ninha</span>
+            <p><i style="color: #22a095;" class="tyni material-icons">check</i>
+            <i style="margin-left: -19px; color: #22a095;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Vai estudar, bicha</span> <br>
+          </button>
+
+          <button style="width: 100%;" onclick="mudaConversa()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">                
+            <img src="perfil.jpg" alt="" class="circle">
+            <span style="font-weight: bold;" class="title">BadNinha</span>
+            <p><i style="color: #22a095;" class="tyni material-icons">check</i>
+            <i style="margin-left: -19px; color: #22a095;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">To nem ai para essa fofoca</span> <br>
+          </button>
+
+          <button style="width: 100%;" onclick="mudaConversa()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">                
+            <img src="perfil.jpg" alt="" class="circle">
+            <span style="font-weight: bold;" class="title">poxAninha</span>
+            <p><i style="color: #22a095;" class="tyni material-icons">check</i>
+            <i style="margin-left: -19px; color: #22a095;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Bora jogar lol?</span> <br>
+          </button>
+
+          <button style="width: 100%;" onclick="mudaConversa()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">                
+            <img src="perfil.jpg" alt="" class="circle">
+            <span style="font-weight: bold;" class="title">SadNinha</span>
+            <p><i style="color: #22a095;" class="tyni material-icons">check</i>
+            <i style="margin-left: -19px; color: #22a095;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Não to bem não</span> <br>
+          </button>
+
+          <button style="width: 100%;" onclick="mudaConversa()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">                
+            <img src="perfil.jpg" alt="" class="circle">
+            <span style="font-weight: bold;" class="title">Kninha</span>
+            <p><i style="color: #22a095;" class="tyni material-icons">check</i>
+            <i style="margin-left: -19px; color: #22a095;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">To tomando uma la...</span> <br>
+          </button>
+
+          <button style="width: 100%;" onclick="mudaConversa()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">                
+            <img src="perfil.jpg" alt="" class="circle">
+            <span style="font-weight: bold;" class="title">soNinha</span>
+            <p><i style="color: #22a095;" class="tyni material-icons">check</i>
+            <i style="margin-left: -19px; color: #22a095;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Foi mal tava dormindo</span> <br>
+          </button>
+
+          <button style="width: 100%;" onclick="mudaConversa()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">                
+            <img src="perfil.jpg" alt="" class="circle">
+            <span style="font-weight: bold;" class="title">Ana Teresa</span>
+            <p><i style="color: #22a095;" class="tyni material-icons">check</i>
+            <i style="margin-left: -19px; color: #22a095;" class="tyni material-icons">check</i><span style="margin-top: 1px !important; position: fixed; color: #b2acac;">To bordando</span> <br>
+          </button>
+
         </ul>
       </div>
 
+
       <!-- ABA STATUS -->
-      <div id="test-swipe-2" class="col s12 ">
-        <ul class="collection border-color color-green">
-            <li class="collection-item border-color text-white  avatar">
-                
-                <span class="title">Aninha</span>
-                <p><i style="color: green;" class="tyni material-icons">call_made</i>
-                    <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 17 de março 20:06</span> <br>
-            
-            </li>
+      <div id="test-swipe-2" class="col s12 aba-status">
+        <ul class="collection border-color-status color-green">
+          <li class="collection-item border-color-status text-white avatar">
+            <img src="perfil.jpg" alt="" class="pic-status">
+            <span style="font-weight: bold; " class="title statust">Meu Status</span>
+            <p>
+            <span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Toque para atualizar seu status</span> <br>
+            <i style="margin-left: -19px;margin-top: 2px ; color: rgb(30, 105, 74);" class="tyni material-icons">add_circle</i>
+          </li>
+
+          <li class="collection-item border-color-status ">
+            <span class="att" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Atualizações recentes</span>
+          </li>
+
+          <li class="collection-item border-color-status text-white avatar">
+            <img src="perfil.jpg" alt="" class="pic-status">
+            <span style="font-weight: bold;" class="title">Kninha</span>
+            <p>
+            <span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Há 40 minutos</span> <br>
+          </li>
+
+          <li class="collection-item border-color-status ">
+            <span class="att" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; ">Atualizações vistas</span>
+          </li>
+
+          <li class="collection-item border-color-status text-white avatar">
+            <img src="perfil.jpg" alt="" class="pic-status">
+            <span style="font-weight: bold;" class="title">sadNinha</span>
+            <p>
+            <span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Ontem 22:38</span> <br>
+          </li>
+          <li class="collection-item border-color-status text-white avatar">
+            <img src="perfil.jpg" alt="" class="pic-status">
+            <span style="font-weight: bold;" class="title">Ana Teresa</span>
+            <p>
+            <span style="margin-top: 1px !important; position: fixed; color: #b2acac;">Ontem 18:52</span> <br>
+          </li>
         </ul>
       </div>
+
 
 
     <!-- ABA CHAMADAS -->
-      <div id="test-swipe-3" class="col s12 ">
-           <ul class="collection border-color color-green">
-            <li class="collection-item border-color text-white  avatar" >
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">Aninha</span>
-                <i class="material-icons telefone-icon">call</i>  <!-- colocar botao para ligação -->
-                <p><i style="color: green;" class="tyni material-icons">call_made</i>
-                    <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 17 de março 20:06</span> <br>
-            </li>
-            <li class="collection-item border-color text-white  avatar">
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">Aninha</span>
-                <p><i style="color: rgb(255, 0, 0);" class="tyni material-icons">call_received</i>
-                    <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 17 de março 20:06</span> <br>
-            </li>
-            <li class="collection-item border-color text-white  avatar">
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">Aninha</span>
-                <p><i style="color: green;" class="tyni material-icons">call_made</i>
-                    <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 17 de março 20:06</span> <br>
-            </li>
-            <li class="collection-item border-color text-white  avatar">
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">Aninha</span>
-                <p><i style="color: rgb(255, 0, 0);" class="tyni material-icons">call_received</i>
-                    <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 17 de março 20:06</span> <br>
-            </li>
-            <li class="collection-item border-color text-white  avatar">
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">Aninha</span>
-                <p><i style="color: rgb(255, 0, 0);" class="tyni material-icons">call_received</i>
-                    <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 17 de março 20:06</span> <br>
-            </li>
-            <li class="collection-item border-color text-white  avatar">
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">Aninha</span>
-                <p><i style="color: green;" class="tyni material-icons">call_made</i>
-                    <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 17 de março 20:06</span> <br>
-            </li>
-            <li class="collection-item border-color text-white  avatar">
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">Aninha</span>
-                <p><i style="color: green;" class="tyni material-icons">call_made</i>
-                    <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 17 de março 20:06</span> <br>
-            </li>
-            <li class="collection-item border-color text-white  avatar">
-                <img src="perfil.jpg" alt="" class="circle">
-                <span class="title">Aninha</span>
-                <p><i style="color: green;" class="tyni material-icons">call_made</i>
-                    <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 17 de março 20:06</span> <br>
-            </li>
-        </ul>
+      <div id="test-swipe-3" class="col s12 aba-chamadas">
+          <ul class="collection border-color color-green">
+            <button style="width: 100%;" onclick="mudaChamada()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">   
+              <img src="perfil.jpg" alt="" class="circle">
+              <span style="font-weight: bold;" class="title">BadNinha</span>
+              <i class="material-icons telefone-icon">call</i>  <!-- colocar botao para ligação -->
+              <p><i style="color: green;" class="tyni material-icons">call_made</i>
+              <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 25 de março 21:06</span> <br>
+            </button>
+
+            <button style="width: 100%;" onclick="mudaChamada()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">   
+              <img src="perfil.jpg" alt="" class="circle">
+              <span style="font-weight: bold;" class="title">Aninha</span>
+              <i class="material-icons telefone-icon">call</i> 
+              <p><i style="color: rgb(255, 0, 0);" class="tyni material-icons">call_received</i>
+              <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 25 de março 00:01</span> <br>
+            </button>
+
+            <button style="width: 100%;" onclick="mudaChamada()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">   
+              <img src="perfil.jpg" alt="" class="circle">
+              <span style="font-weight: bold;" class="title">SadNinha</span>
+              <i class="material-icons telefone-icon">call</i> 
+              <p><i style="color: green;" class="tyni material-icons">call_made</i>
+              <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 24 de março 05:00</span> <br>
+            </button>
+
+            <button style="width: 100%;" onclick="mudaChamada()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">   
+              <img src="perfil.jpg" alt="" class="circle">
+              <span style="font-weight: bold;" class="title">Ana Teresa</span>
+              <i class="material-icons telefone-icon">call</i> 
+              <p><i style="color: rgb(255, 0, 0);" class="tyni material-icons">call_received</i>
+              <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 20 de março 15:16</span> <br>
+            </button>
+
+            <button style="width: 100%;" onclick="mudaChamada()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">   
+              <img src="perfil.jpg" alt="" class="circle">
+              <span style="font-weight: bold;" class="title">Aninha</span>
+              <i class="material-icons telefone-icon">call</i> 
+              <p><i style="color: rgb(255, 0, 0);" class="tyni material-icons">call_received</i>
+              <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 19 de março 18:17</span> <br>
+            </button>
+
+            <button style="width: 100%;" onclick="mudaChamada()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">   
+              <img src="perfil.jpg" alt="" class="circle">
+              <span style="font-weight: bold;" class="title">Ninha</span>
+              <i class="material-icons telefone-icon">call</i> 
+              <p><i style="color: green;" class="tyni material-icons">call_made</i>
+              <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 17 de março 20:06</span> <br>
+            </button>
+
+            <button style="width: 100%;" onclick="mudaConversa()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">   
+              <img src="perfil.jpg" alt="" class="circle">
+              <span style="font-weight: bold;" class="title">Kninha</span>
+              <i class="material-icons telefone-icon">call</i> 
+              <p><i style="color: green;" class="tyni material-icons">call_made</i>
+              <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 15 de março 05:12</span> <br>
+            </button>
+
+            <button style="width: 100%;" onclick="mudaConversa()" class="waves-effect btn-flat collection-item border-color text-white avatar btnConv">   
+              <img src="perfil.jpg" alt="" class="circle">
+              <span style="font-weight: bold;" class="title">Kninha</span>
+              <i class="material-icons telefone-icon">call</i> 
+              <p><i style="color: green;" class="tyni material-icons">call_made</i>
+              <span style="margin-top: 1px !important; position: fixed; color: #b2acac;"> 14 de março 10:56</span> <br>
+            </button>
+          </ul>
       </div>
 
 
 
     <!-- ABA CAMERA -->
-      <div id="test-swipe-4" class="col s12 ">
-        <button id='capture'>Capturar</button>
-        <button id="upload">Upload</button>
+      <div id="test-swipe-4" class="col s12">  
+        
         <video id='video' class="video" ></video>
+        <div class="col-md-12" style="display: flex;">
+          <a  style="margin: auto;" class="btn-floating btn-flat waves-effect waves-ligh btn-capture"><i style="color: rgb(204, 204, 204); font-size: 1.8rem;" class="material-icons">flash_off</i></a>   
+          <a id = "capture" style="margin: auto;" class="btn-floating btn-flat waves-effect waves-ligh btn-capture"><i style="color: rgb(204, 204, 204); font-size: 3.1rem;" class="material-icons">panorama_fish_eye</i></a>  
+          <a  style="margin: auto;" class="btn-floating btn-flat waves-effect waves-ligh btn-capture"><i style="color: rgb(204, 204, 204); font-size: 1.8rem;" class="material-icons">party_mode</i></a>             
+        </div>
         <canvas id='canvas'></canvas>
         <br />
    
@@ -167,7 +250,7 @@
 </body>
     
 <script>
-  
+
 navigator.mediaDevices.getUserMedia({video: true})
 .then(function (mediaStream) {
   var video = document.querySelector('#video');
@@ -180,7 +263,7 @@ navigator.mediaDevices.getUserMedia({video: true})
 }) 
 
 document.querySelector('#capture').addEventListener('click', function (e) {
-var video = document.querySelector('#video');
+  var video = document.querySelector('#video');
   var canvas = document.querySelector("#canvas");  
   canvas.height = video.videoHeight;
   canvas.width = video.videoWidth;
@@ -189,39 +272,36 @@ var video = document.querySelector('#video');
   context.drawImage(video, 0, 0)
 })
 
-document.querySelector('#upload').addEventListener('click', function (e) {
+function darkMode() {
+  $("#lightButton").css({"display": "block"});
+  $("#darkButton").css({"display": "none"});
+  document.getElementById('pagestyle').setAttribute('href', 'stylemn.css');
+  }
 
-var canvas = document.querySelector("#canvas");
 
-canvas.toBlob(function (blob) {
-    
-    var form = new FormData();
-    form.append('image', blob, 'webcam.jpg');
+function lightMode() {
+  $("#darkButton").css({"display": "block"});
+  $("#lightButton").css({"display": "none"});
+  document.getElementById('pagestyle').setAttribute('href', 'style.css');
+}
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/upload', true);
-    xhr.onload = function(e) {
-        // upload concluído  
-    };
 
-    xhr.send(form);  
-                            
-}, 'image/jpeg');
-})
-</script>
+  </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-      $(document).ready(function(){
+  <script src="/js/routes.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+
+    $(document).ready(function(){
+      $(".dropdown-trigger").dropdown();
+
       $('.tabs').tabs({
         swipeable: true
       });
-    });
+   });
 
-    
-    </script>
-
+  </script>
 </html>
 
